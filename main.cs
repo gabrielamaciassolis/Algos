@@ -3,9 +3,9 @@ using System;
 class MainClass {
   public static void Main (string[] args) {
     Console.WriteLine ("init");
-      int[] nums = {1,1,0,1,1,1,0,1,1};
+      int[] nums = {12,345,2,6,7896};
 
-     int results = FindMaxConsecutiveOnes(nums);  
+     int results = FindNumbersEvenDigitsC.FindNumbersEvenDigits(nums);  
 
     Console.WriteLine ("results {0}", results);  
 
@@ -13,17 +13,5 @@ class MainClass {
 
   }
 
-   static public int FindMaxConsecutiveOnes(int[] nums) {
-        int max = 0;
-        int contador = 0;
-          for(int i = 0 ; i<nums.Length ; i++){
-          if(nums[i] == 1){
-            contador++;
-            max = Math.Max(contador,max);
-          }else{
-          contador = 0;
-          }
-        }
-        return max;
-    }
+  
 }
